@@ -11,7 +11,14 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+
+//For Register. Send parameters: email, password, firstName, lastName
+//http://localhost/trippify/public/register?email=nootboy2008@gmail.com&password=1234&firstName=Noah&lastName=Gansallo
+Route::any('/register', 'HomeController@registerUser');
+
+//For Login. Send parameters: email, password
+//http://localhost/trippify/public/login?email=nootboy2008@gmail.com&password=1234
+Route::any('/login', 'HomeController@loginUser');
+
+
+

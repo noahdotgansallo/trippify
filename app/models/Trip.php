@@ -19,4 +19,9 @@ class Trip extends Eloquent {
 	{
 		return $this->belongsToMany('Trip');
 	}
+
+	public function events()
+	{
+		return $this->hasMany('Event');
+	}
 }

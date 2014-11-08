@@ -34,3 +34,14 @@ Route::any('/overview', 'DashboardController@index');
 */
 
 Route::any('/create/trip', 'TripController@createTrip');
+
+/*
+	For creation of events 
+	Send parameters
+	trip_id: Id of the trip
+	city: City they are going to 
+	arrive_date: Arrive Date in format yyyy-mm-dd
+	end_date: End Date in format "" 
+*/
+
+Route::any('/create/event', 'TripController@createEvent');

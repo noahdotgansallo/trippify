@@ -23,4 +23,14 @@ class TripController extends BaseController {
 
 		$user->trips()->updateExistingPivot($trip->id, array('access'=> True));
 	}
+
+	public function createEvent()
+	{
+		$event = new Event;
+		$event->city = Input::get('city');
+		$event->arrive_date = Input::get('arrive_date');
+		$event->end_date = Input::get('end_date');
+		$event->trip_id = Input::get('trip_id');
+		$event->save();
+	}
 }

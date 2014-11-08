@@ -34,4 +34,3 @@ Route::any('/overview', 'DashboardController@index');
 */
 
 Route::any('/create/trip', 'TripController@createTrip');
-

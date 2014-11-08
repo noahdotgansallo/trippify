@@ -9,7 +9,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	public function trip()
 	{
-		return $this->hasMany('Trip');
+		return $this->belongsToMany('Trip');
 	}
 
 	use UserTrait, RemindableTrait;

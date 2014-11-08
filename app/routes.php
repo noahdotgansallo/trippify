@@ -20,5 +20,7 @@ Route::any('/register', 'HomeController@registerUser');
 //http://localhost/trippify/public/login?email=nootboy2008@gmail.com&password=1234
 Route::any('/login', 'HomeController@loginUser');
 
-
+//Returns the user info. No parameters
+//http://localhost/trippify/public/overview
+Route::any('/overview', 'DashboardController@index');
 

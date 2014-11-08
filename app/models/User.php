@@ -7,6 +7,11 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
+	public function trip()
+	{
+		return $this->hasMany('Trip');
+	}
+
 	use UserTrait, RemindableTrait;
 
 	/**
@@ -22,5 +27,6 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 * @var array
 	 */
 	protected $hidden = array('password', 'remember_token');
+
 
 }

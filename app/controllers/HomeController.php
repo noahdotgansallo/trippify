@@ -43,8 +43,16 @@ class HomeController extends BaseController {
 			'email' => $input['email'],
 			'password' => $input['password']
 		);
-		$user = Sentry::authenticate($credentials, false);
-		dd($user);
+		try {
+			$user = Sentry::authenticate($credentials, false);
+			return Redirect::action('DashboardController@index');
+		} catch (Exception $e) {
+			$error = array(
+				'access' => 0
+				);
+			return $error;
+		}
+		
 	}
 
 	public function yelpSearch()

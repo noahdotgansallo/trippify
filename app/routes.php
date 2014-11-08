@@ -24,3 +24,14 @@ Route::any('/login', 'HomeController@loginUser');
 //http://localhost/trippify/public/overview
 Route::any('/overview', 'DashboardController@index');
 
+/*
+	For creation of trips
+	Send parameters
+	title : The trip's title
+	description : the trip's description in 500 characters
+	startDate
+	endDate
+*/
+
+Route::any('/create/trip', 'TripController@createTrip');
+
